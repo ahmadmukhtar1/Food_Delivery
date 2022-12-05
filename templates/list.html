@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Delivery | Shipping</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/layout.css' %}" type="text/css" media="screen">
+<script src="{% static 'js/jquery-1.7.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/cufon-yui.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/cufon-replace.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Dynalight_400.font.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/FF-cash.js' %}" type="text/javascript"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+</head>
+<body id="page4">
+<!--==============================header=================================-->
+<header>
+  <div class="row-top">
+    <div class="main">
+      <div class="wrapper">
+        <h1><a href="{% url 'home' %}">Delivery<span>.com</span></a></h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a class="active" href="{% url 'list' %}">Order list</a></li>
+            <li><a href="{% url 'form' %}">Place Order </a></li>
+
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="row-bot">
+    <div class="row-bot-bg">
+      <div class="main">
+        <h2>Impressive Selection <span>for any Occasion</span></h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section id="content">
+  <div class="main">
+    <div class="wrapper">
+      <article class="col-1">
+        <div class="indent-left">
+          <div class="p2">
+            <h3 class="p1">Available Orders</h3>
+        <table border="">
+          <tr>
+            <th>First Name</th><th>Last Name</th><th>Registration No</th>
+          </tr>
+          {% for x in details %}
+          <tr>
+            <td>{{ x.FirstName }}<br></td>
+            <td>{{ x.LastName }}</td>
+            <td>{{ x.Reg_No }}</td>
+            <td> 
+              <a href="{% url 'update' x.id %}" >Update</a></td>
+          </tr>  
+          {% endfor %}
+        </table>
+
+         <h3 class="p1">Standard Delivery Schedule</h3>
+          <dl class="list-2">
+            <dt><em>Order placed</em><span>Order received</span></dt>
+            <dd><em>Monday</em><span>Thursday</span></dd>
+            <dd><em>Tuesday</em><span>Friday</span></dd>
+            <dd><em>Wednesday</em><span>Saturday</span></dd>
+            <dd><em>Thursday</em><span>Sunday</span></dd>
+            <dd><em>Friday</em><span>Monday</span></dd>
+            <dd><em>Saturday</em><span>Tuesday</span></dd>
+            <dd><em>Sunday</em><span>Wednesday</span></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="col-2">
+        <h3 class="p1">Ordering In</h3>
+        <p></p>
+        <figure class="img-indent-bot">
+          <iframe width="610" height="310" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Nigeria,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+        </figure>
+        </article>
+        <div class="buttons">
+         
+        </div>
+    </div>
+  </div>
+</section>
+<!--==============================footer=================================-->
+<footer>
+  <div class="main">
+    <div class="aligncenter"> <span>Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved</span> Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a> </div>
+  </div>
+</footer>
+<script type="text/javascript">Cufon.now();</script>
+</body>
+</html>

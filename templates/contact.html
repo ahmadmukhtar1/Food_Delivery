@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Delivery | Contact</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/layout.css' %}" type="text/css" media="screen">
+<script src="{% static 'js/jquery-1.7.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/cufon-yui.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/cufon-replace.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/Dynalight_400.font.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/FF-cash.js' %}" type="text/javascript"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+</head>
+<body id="page6">
+<!--==============================header=================================-->
+<header>
+  <div class="row-top">
+    <div class="main">
+      <div class="wrapper">
+        <h1><a href="{% url 'home' %}">Delivery<span>.com</span></a></h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="{% url 'list' %}">Order list</a></li>
+            <li><a href="{% url 'form' %}">Place Order </a></li>
+            <li><a class="active" href="{% url 'contact' %}">Contact</a></li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="row-bot">
+    <div class="row-bot-bg">
+      <div class="main">
+        <h2>Impressive Selection <span>for any Occasion</span></h2>
+      </div>
+    </div>
+  </div>
+</header>
+<!--==============================content================================-->
+<section id="content">
+  <div class="main">
+    <div class="wrapper">
+      <article class="col-1">
+        <div class="indent-left">
+          <h3 class="p1">Our Contacts</h3>
+          <figure class="indent-bot">
+            <iframe width="240" height="180" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+          </figure>
+          <dl>
+            <dt class="p1">USA 8901 Marmora Rd, Glasgow</dt>
+            <dd><span>Freephone:</span> 08029584707</dd>
+            <dd><span>Telephone:</span> 08168209435</dd>
+            <dd><span>Fax:</span> 07048155480</dd>
+            <dd><span>Email:</span><a class="color-2" href="#">ahmadooh@gmail.com</a></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="col-2">
+        <h3 class="p1">Contact Form</h3>
+        <form id="contact-form" action="#" method="post" enctype="multipart/form-data">
+          <fieldset>
+            <label><span class="text-form">Your Name:</span>
+              <input name="name" type="text" />
+            </label>
+            <label><span class="text-form">Your Email:</span>
+              <input name="email" type="text" />
+            </label>
+            <div class="wrapper">
+              <div class="text-form">Your Message:</div>
+              <div class="extra-wrap">
+                <textarea></textarea>
+                <div class="clear"></div>
+                <div class="buttons"> <a class="button-2" href="#">Clear</a> <a class="button-2" href="mailto:ahmadooh116@gamil.com">Send</a> </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </article>
+    </div>
+  </div>
+</section>
+<!--==============================footer=================================-->
+<footer>
+  <div class="main">
+    <div class="aligncenter"> <span>Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved</span> Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a> </div>
+  </div>
+</footer>
+<script type="text/javascript">Cufon.now();</script>
+</body>
+</html>
