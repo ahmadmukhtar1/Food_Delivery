@@ -18,9 +18,11 @@ from django.urls import path, include
 
 from django.conf import settings
 from django.conf.urls.static import static
+from homee.views import Home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', Home),
     path('', include('homee.urls')),
 ]
 
